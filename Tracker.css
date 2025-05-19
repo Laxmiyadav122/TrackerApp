@@ -1,0 +1,147 @@
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-size: cover;
+    color: #333;
+    /* transition: background 0.5s ease-in-out; */
+    background: linear-gradient(to right, #e0f1df, #b3e0ff, #e0e4ef);
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    height: 75vh;
+    width: 80%;
+    margin: 3% auto;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 1200px;
+    /* transition: transform 0.3s ease-in-out; */
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h1, h2 {
+    text-align: center;
+    padding: 10px;
+    color: #030910; 
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    animation: textGlow 1.5s infinite alternate;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50, 0 0 15px #4CAF50;
+    }
+    100% {
+        text-shadow: 0 0 10px #4CAF50, 0 0 20px #4CAF50, 0 0 30px #4CAF50;
+    }
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.main label, .main input, .main select, .main button {
+    margin: 10px;
+    font-size: 16px;
+}
+
+.main input, .main select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* transition: all 0.3s ease-in-out; */
+}
+.main button {
+    background-color: #f67e23;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* transition: all 0.3s ease-in-out; */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f7995a; 
+    color: white; 
+}
+
+.delete-btn, .edit-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.delete-btn {
+    background-color: #e96868; 
+    margin-left: 30px;
+}
+
+.edit-btn {
+    background-color: #595f95; 
+    color: #fff;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.delete-btn:hover, .edit-btn:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .main label, .main input, .main select, .main button {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    .main label, .main input, .main select, .main button {
+        font-size: 14px;
+    }
+}
